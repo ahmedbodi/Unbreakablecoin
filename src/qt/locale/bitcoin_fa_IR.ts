@@ -160,8 +160,8 @@
         <translation>تایید رمزگذاری</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin برای اتمام فرایند رمزگذاری بسته خواهد شد. به خاطر داشته باشید که رمزگذاری WALLET شما،  کامپیوتر شما را از آلودگی به بدافزارها مصون نمی دارد.</translation>
+        <source>Unbreakablecoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your unbreakablecoins from being stolen by malware infecting your computer.</source>
+        <translation>Unbreakablecoin برای اتمام فرایند رمزگذاری بسته خواهد شد. به خاطر داشته باشید که رمزگذاری WALLET شما،  کامپیوتر شما را از آلودگی به بدافزارها مصون نمی دارد.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -251,8 +251,8 @@
         <translation>تغییر رمز/پَس فرِیز</translation>
     </message>
     <message>
-        <source>Modify configuration options for Bitcoin</source>
-        <translation>اصلاح انتخابها برای پیکربندی Bitcoin</translation>
+        <source>Modify configuration options for Unbreakablecoin</source>
+        <translation>اصلاح انتخابها برای پیکربندی Unbreakablecoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -263,8 +263,8 @@
         <translation>رمز مربوط به رمزگذاریِ wallet را تغییر دهید</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>bitcoin</translation>
+        <source>Unbreakablecoin</source>
+        <translation>unbreakablecoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -406,8 +406,8 @@ Address: %4
         <translation>ویرایش حساب ارسال کننده</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Bitcoin address.</source>
-        <translation>آدرس وارد شده "%1" یک آدرس صحیح برای bitcoin نسشت</translation>
+        <source>The entered address "%1" is not a valid Unbreakablecoin address.</source>
+        <translation>آدرس وارد شده "%1" یک آدرس صحیح برای unbreakablecoin نسشت</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -468,8 +468,8 @@ Address: %4
         <translation>فرم</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>اطلاعات نمایش داده شده ممکن است روزآمد نباشد. wallet شما به صورت خودکار بعد از برقراری اتصال با شبکه bitcoin به روز می شود اما این فرایند هنوز تکمیل نشده است.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Unbreakablecoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>اطلاعات نمایش داده شده ممکن است روزآمد نباشد. wallet شما به صورت خودکار بعد از برقراری اتصال با شبکه unbreakablecoin به روز می شود اما این فرایند هنوز تکمیل نشده است.</translation>
     </message>
     <message>
         <source>out of sync</source>
@@ -519,8 +519,8 @@ Address: %4
         <translation>تعداد زنجیره های حاضر</translation>
     </message>
     <message>
-        <source>Welcome to the Bitcoin RPC console.</source>
-        <translation>به کنسول آر.پی.سی. BITCOIN خوش آمدید</translation>
+        <source>Welcome to the Unbreakablecoin RPC console.</source>
+        <translation>به کنسول آر.پی.سی. UNBREAKABLECOIN خوش آمدید</translation>
     </message>
     </context>
 <context>
@@ -681,7 +681,7 @@ Address: %4
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Bitcoin Core is shutting down...</source>
+        <source>Unbreakablecoin Core is shutting down...</source>
         <translation>هسته بیت کوین در حال خاموش شدن است...</translation>
     </message>
     <message>
@@ -1004,7 +1004,7 @@ Address: %4
     </message>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>unbreakablecoin-core</name>
     <message>
         <source>Options:</source>
         <translation>انتخابها:</translation>

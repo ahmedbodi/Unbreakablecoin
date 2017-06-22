@@ -66,12 +66,12 @@
         <translation>Adres odbiorczy</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Tutaj znajdują się adresy Bitcoin, na które wysyłasz płatności. Zawsze sprawdzaj ilość i adres odbiorcy przed wysyłką monet.</translation>
+        <source>These are your Unbreakablecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Tutaj znajdują się adresy Unbreakablecoin, na które wysyłasz płatności. Zawsze sprawdzaj ilość i adres odbiorcy przed wysyłką monet.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>To twoje adresy Bitcoin, na które otrzymujesz płatności. Zaleca się używanie nowych adresów odbiorczych dla każdej transakcji.</translation>
+        <source>These are your Unbreakablecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>To twoje adresy Unbreakablecoin, na które otrzymujesz płatności. Zaleca się używanie nowych adresów odbiorczych dla każdej transakcji.</translation>
     </message>
     <message>
         <source>Copy &amp;Label</source>
@@ -164,8 +164,8 @@
         <translation>Potwierdź szyfrowanie portfela</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Uwaga: Jeśli zaszyfrujesz swój portfel i zgubisz hasło to &lt;b&gt;STRACISZ WSZYSTKIE SWOJE BITCOIN'Y&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR UNBREAKABLECOINS&lt;/b&gt;!</source>
+        <translation>Uwaga: Jeśli zaszyfrujesz swój portfel i zgubisz hasło to &lt;b&gt;STRACISZ WSZYSTKIE SWOJE UNBREAKABLECOIN'Y&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -188,8 +188,8 @@
         <translation>Wprowadź nowe hasło do portfela.&lt;br/&gt;Proszę używać hasła złożonego z &lt;b&gt;10 lub więcej losowych znaków&lt;/b&gt; lub &lt;b&gt;ośmiu lub więcej słów.&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Program Bitcoin zamknie się aby dokończyć proces szyfrowania. Pamiętaj, że szyfrowanie portfela nie zabezpiecza w pełni Twoich bitcoinów przed kradzieżą przez wirusy mogące zainfekować Twój komputer.</translation>
+        <source>Unbreakablecoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your unbreakablecoins from being stolen by malware infecting your computer.</source>
+        <translation>Program Unbreakablecoin zamknie się aby dokończyć proces szyfrowania. Pamiętaj, że szyfrowanie portfela nie zabezpiecza w pełni Twoich unbreakablecoinów przed kradzieżą przez wirusy mogące zainfekować Twój komputer.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -295,8 +295,8 @@
         <translation>Otwórz URI...</translation>
     </message>
     <message>
-        <source>Bitcoin Core client</source>
-        <translation>Rdzeń klienta Bitcoin</translation>
+        <source>Unbreakablecoin Core client</source>
+        <translation>Rdzeń klienta Unbreakablecoin</translation>
     </message>
     <message>
         <source>Importing blocks from disk...</source>
@@ -307,12 +307,12 @@
         <translation>Ponowne indeksowanie bloków na dysku...</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
-        <translation>Wyślij monety na adres Bitcoin</translation>
+        <source>Send coins to a Unbreakablecoin address</source>
+        <translation>Wyślij monety na adres Unbreakablecoin</translation>
     </message>
     <message>
-        <source>Modify configuration options for Bitcoin</source>
-        <translation>Zmienia opcje konfiguracji bitcoina</translation>
+        <source>Modify configuration options for Unbreakablecoin</source>
+        <translation>Zmienia opcje konfiguracji unbreakablecoina</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -335,8 +335,8 @@
         <translation>&amp;Zweryfikuj wiadomość...</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Unbreakablecoin</source>
+        <translation>Unbreakablecoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -351,8 +351,8 @@
         <translation>Odbie&amp;rz</translation>
     </message>
     <message>
-        <source>Show information about Bitcoin Core</source>
-        <translation>Pokaż informacje o Rdzeniu Bitcoin</translation>
+        <source>Show information about Unbreakablecoin Core</source>
+        <translation>Pokaż informacje o Rdzeniu Unbreakablecoin</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -367,12 +367,12 @@
         <translation>Szyfruj klucze prywatne, które są w Twoim portfelu</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
+        <source>Sign messages with your Unbreakablecoin addresses to prove you own them</source>
         <translation>Podpisz wiadomości swoim adresem aby udowodnić jego posiadanie</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation>Zweryfikuj wiadomość,  aby upewnić się, że została podpisana podanym adresem Bitcoin.</translation>
+        <source>Verify messages to ensure they were signed with specified Unbreakablecoin addresses</source>
+        <translation>Zweryfikuj wiadomość,  aby upewnić się, że została podpisana podanym adresem Unbreakablecoin.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -391,16 +391,16 @@
         <translation>Pasek zakładek</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Rdzeń Bitcoin</translation>
+        <source>Unbreakablecoin Core</source>
+        <translation>Rdzeń Unbreakablecoin</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Żądaj płatności (generuje kod QR oraz bitcoin URI)</translation>
+        <source>Request payments (generates QR codes and unbreakablecoin: URIs)</source>
+        <translation>Żądaj płatności (generuje kod QR oraz unbreakablecoin URI)</translation>
     </message>
     <message>
-        <source>&amp;About Bitcoin Core</source>
-        <translation>&amp;O Bitcoin Core</translation>
+        <source>&amp;About Unbreakablecoin Core</source>
+        <translation>&amp;O Unbreakablecoin Core</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -411,20 +411,20 @@
         <translation>Pokaż listę adresów i etykiet użytych do odbierania</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Otwórz URI bitcoin: lub żądanie zapłaty</translation>
+        <source>Open a unbreakablecoin: URI or payment request</source>
+        <translation>Otwórz URI unbreakablecoin: lub żądanie zapłaty</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Opcje linii komend</translation>
     </message>
     <message>
-        <source>Show the Bitcoin Core help message to get a list with possible Bitcoin command-line options</source>
-        <translation>Pokaż pomoc Rdzenia Bitcoin, aby zobaczyć listę wszystkich opcji linii poleceń</translation>
+        <source>Show the Unbreakablecoin Core help message to get a list with possible Unbreakablecoin command-line options</source>
+        <translation>Pokaż pomoc Rdzenia Unbreakablecoin, aby zobaczyć listę wszystkich opcji linii poleceń</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin network</source>
-        <translation><numerusform>%n aktywne połączenie do sieci Bitcoin</numerusform><numerusform>%n aktywne połączenia do sieci Bitcoin</numerusform><numerusform>%n aktywnych połączeń do sieci Bitcoin</numerusform></translation>
+        <source>%n active connection(s) to Unbreakablecoin network</source>
+        <translation><numerusform>%n aktywne połączenie do sieci Unbreakablecoin</numerusform><numerusform>%n aktywne połączenia do sieci Unbreakablecoin</numerusform><numerusform>%n aktywnych połączeń do sieci Unbreakablecoin</numerusform></translation>
     </message>
     <message>
         <source>No block source available...</source>
@@ -788,8 +788,8 @@ Adres: %4
         <translation>Wprowadzony adres "%1" już istnieje w książce adresowej.</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Bitcoin address.</source>
-        <translation>Wprowadzony adres "%1" nie jest poprawnym adresem Bitcoin.</translation>
+        <source>The entered address "%1" is not a valid Unbreakablecoin address.</source>
+        <translation>Wprowadzony adres "%1" nie jest poprawnym adresem Unbreakablecoin.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -826,8 +826,8 @@ Adres: %4
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Rdzeń Bitcoin</translation>
+        <source>Unbreakablecoin Core</source>
+        <translation>Rdzeń Unbreakablecoin</translation>
     </message>
     <message>
         <source>version</source>
@@ -838,8 +838,8 @@ Adres: %4
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About Bitcoin Core</source>
-        <translation>O Bitcoin Core</translation>
+        <source>About Unbreakablecoin Core</source>
+        <translation>O Unbreakablecoin Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -885,16 +885,16 @@ Adres: %4
         <translation>Witaj</translation>
     </message>
     <message>
-        <source>Welcome to Bitcoin Core.</source>
-        <translation>Witam w Bitcoin Core</translation>
+        <source>Welcome to Unbreakablecoin Core.</source>
+        <translation>Witam w Unbreakablecoin Core</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Bitcoin Core will store its data.</source>
-        <translation>Ponieważ jest to pierwsze uruchomienie programu, możesz wybrać gdzie Bitcoin Core będzie przechowywał swoje dane.</translation>
+        <source>As this is the first time the program is launched, you can choose where Unbreakablecoin Core will store its data.</source>
+        <translation>Ponieważ jest to pierwsze uruchomienie programu, możesz wybrać gdzie Unbreakablecoin Core będzie przechowywał swoje dane.</translation>
     </message>
     <message>
-        <source>Bitcoin Core will download and store a copy of the Bitcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Program pobierze i będzie przechowywał kopię łańcucha bloków Bitcoin. W wybranym katalogu musi być przynajmniej %1GB miejsca, a z czasem ilość danych będzie rosła. Portfel będzie przechowywany w tym samym katalogu.</translation>
+        <source>Unbreakablecoin Core will download and store a copy of the Unbreakablecoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Program pobierze i będzie przechowywał kopię łańcucha bloków Unbreakablecoin. W wybranym katalogu musi być przynajmniej %1GB miejsca, a z czasem ilość danych będzie rosła. Portfel będzie przechowywany w tym samym katalogu.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -905,8 +905,8 @@ Adres: %4
         <translation>Użyj wybranego folderu dla danych</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Rdzeń Bitcoin</translation>
+        <source>Unbreakablecoin Core</source>
+        <translation>Rdzeń Unbreakablecoin</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -959,12 +959,12 @@ Adres: %4
         <translation>Główne</translation>
     </message>
     <message>
-        <source>Automatically start Bitcoin after logging in to the system.</source>
-        <translation>Automatycznie uruchamia Bitcoin po zalogowaniu do systemu.</translation>
+        <source>Automatically start Unbreakablecoin after logging in to the system.</source>
+        <translation>Automatycznie uruchamia Unbreakablecoin po zalogowaniu do systemu.</translation>
     </message>
     <message>
-        <source>&amp;Start Bitcoin on system login</source>
-        <translation>Uruchamiaj Bitcoin wraz z zalogowaniem do &amp;systemu</translation>
+        <source>&amp;Start Unbreakablecoin on system login</source>
+        <translation>Uruchamiaj Unbreakablecoin wraz z zalogowaniem do &amp;systemu</translation>
     </message>
     <message>
         <source>Size of &amp;database cache</source>
@@ -1039,16 +1039,16 @@ Adres: %4
         <translation>Wydaj niepotwierdzoną re&amp;sztę</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatycznie otwiera port klienta Bitcoin na routerze. Ta opcja dzieła tylko jeśli twój router wspiera UPnP i jest ono włączone.</translation>
+        <source>Automatically open the Unbreakablecoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatycznie otwiera port klienta Unbreakablecoin na routerze. Ta opcja dzieła tylko jeśli twój router wspiera UPnP i jest ono włączone.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Mapuj port używając &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Bitcoin network through a SOCKS5 proxy.</source>
-        <translation>Połącz się z siecią Bitcoin poprzez proxy SOCKS5.</translation>
+        <source>Connect to the Unbreakablecoin network through a SOCKS5 proxy.</source>
+        <translation>Połącz się z siecią Unbreakablecoin poprzez proxy SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1095,8 +1095,8 @@ Adres: %4
         <translation>Język &amp;Użytkownika:</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Bitcoin.</source>
-        <translation>Można tu ustawić język interfejsu uzytkownika. Żeby ustawienie przyniosło skutek trzeba uruchomić ponownie Bitcoin.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Unbreakablecoin.</source>
+        <translation>Można tu ustawić język interfejsu uzytkownika. Żeby ustawienie przyniosło skutek trzeba uruchomić ponownie Unbreakablecoin.</translation>
     </message>
     <message>
         <source>&amp;Unit to show amounts in:</source>
@@ -1154,8 +1154,8 @@ Adres: %4
         <translation>Formularz</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Wyświetlana informacja może być nieaktualna. Twój portfel synchronizuje się automatycznie z siecią bitcoin, zaraz po tym jak uzyskano połączenie, ale proces ten nie został jeszcze ukończony.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Unbreakablecoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Wyświetlana informacja może być nieaktualna. Twój portfel synchronizuje się automatycznie z siecią unbreakablecoin, zaraz po tym jak uzyskano połączenie, ale proces ten nie został jeszcze ukończony.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1261,16 +1261,16 @@ Adres: %4
         <translation>Błąd żądania płatności</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>Nie można uruchomić protokołu bitcoin: kliknij-by-zapłacić</translation>
+        <source>Cannot start unbreakablecoin: click-to-pay handler</source>
+        <translation>Nie można uruchomić protokołu unbreakablecoin: kliknij-by-zapłacić</translation>
     </message>
     <message>
         <source>Payment request fetch URL is invalid: %1</source>
         <translation>URL pobrania żądania zapłaty jest nieprawidłowe: %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
-        <translation>URI nie może zostać przetworzony! Może to być spowodowane nieprawidłowym adresem Bitcoin lub uszkodzonymi parametrami URI.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Unbreakablecoin address or malformed URI parameters.</source>
+        <translation>URI nie może zostać przetworzony! Może to być spowodowane nieprawidłowym adresem Unbreakablecoin lub uszkodzonymi parametrami URI.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1339,8 +1339,8 @@ Adres: %4
         <translation>Kwota</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
-        <translation>Wprowadź adres Bitcoin (np. %1)</translation>
+        <source>Enter a Unbreakablecoin address (e.g. %1)</source>
+        <translation>Wprowadź adres Unbreakablecoin (np. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1565,16 +1565,16 @@ Adres: %4
         <translation>Plik logowania debugowania</translation>
     </message>
     <message>
-        <source>Open the Bitcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Otwórz plik logowania debugowania Bitcoin z obecnego katalogu z danymi. Może to potrwać kilka sekund przy większych plikach.</translation>
+        <source>Open the Unbreakablecoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Otwórz plik logowania debugowania Unbreakablecoin z obecnego katalogu z danymi. Może to potrwać kilka sekund przy większych plikach.</translation>
     </message>
     <message>
         <source>Clear console</source>
         <translation>Wyczyść konsolę</translation>
     </message>
     <message>
-        <source>Welcome to the Bitcoin RPC console.</source>
-        <translation>Witam w konsoli Bitcoin RPC.</translation>
+        <source>Welcome to the Unbreakablecoin RPC console.</source>
+        <translation>Witam w konsoli Unbreakablecoin RPC.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -1644,8 +1644,8 @@ Adres: %4
         <translation>Użyj jednego z poprzednio użytych adresów odbiorczych. Podczas ponownego używania adresów występują problemy z bezpieczeństwem i prywatnością. Nie korzystaj z tej opcji, chyba że odtwarzasz żądanie płatności wykonane już wcześniej.</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin network.</source>
-        <translation>Opcjonalna wiadomość do dołączenia do żądania płatności, która będzie wyświetlana, gdy żądanie zostanie otwarte. Uwaga: wiadomość ta nie zostanie wysłana wraz z płatnością w sieci Bitcoin.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Unbreakablecoin network.</source>
+        <translation>Opcjonalna wiadomość do dołączenia do żądania płatności, która będzie wyświetlana, gdy żądanie zostanie otwarte. Uwaga: wiadomość ta nie zostanie wysłana wraz z płatnością w sieci Unbreakablecoin.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1881,8 +1881,8 @@ Adres: %4
         <translation>razem przynajmniej</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitcoin transactions than the network can process.</source>
-        <translation>Zapłacenie tylko minimalnej opłaty jest nadal wystarczające, dopóki jest mniejszy wolumen transakcji niż miejsca w blokach. Należy jednak mieć świadomość, że może skończyć się to niezatwierdzeniem nigdy transakcji, gdy jest większe zapotrzebowanie na transakcje bitcoina niż sieć może przetworzyć.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for unbreakablecoin transactions than the network can process.</source>
+        <translation>Zapłacenie tylko minimalnej opłaty jest nadal wystarczające, dopóki jest mniejszy wolumen transakcji niż miejsca w blokach. Należy jednak mieć świadomość, że może skończyć się to niezatwierdzeniem nigdy transakcji, gdy jest większe zapotrzebowanie na transakcje unbreakablecoina niż sieć może przetworzyć.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -2033,8 +2033,8 @@ Adres: %4
         <translation>Płac tylko minimalna opłatę %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid Bitcoin address</source>
-        <translation>Ostrzeżenie: nieprawidłowy adres Bitcoin</translation>
+        <source>Warning: Invalid Unbreakablecoin address</source>
+        <translation>Ostrzeżenie: nieprawidłowy adres Unbreakablecoin</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -2084,8 +2084,8 @@ Adres: %4
         <translation>To jest standardowa płatność</translation>
     </message>
     <message>
-        <source>The Bitcoin address to send the payment to</source>
-        <translation>Adres Bitcoin gdzie wysłać płatność</translation>
+        <source>The Unbreakablecoin address to send the payment to</source>
+        <translation>Adres Unbreakablecoin gdzie wysłać płatność</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2116,8 +2116,8 @@ Adres: %4
         <translation>Wprowadź etykietę dla tego adresu by dodać go do listy użytych adresów</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>Wiadomość, która została dołączona do URI bitcoin:, która będzie przechowywana wraz z transakcją w celach informacyjnych. Uwaga: Ta wiadomość nie będzie rozsyłana w sieci Bitcoin.</translation>
+        <source>A message that was attached to the unbreakablecoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Unbreakablecoin network.</source>
+        <translation>Wiadomość, która została dołączona do URI unbreakablecoin:, która będzie przechowywana wraz z transakcją w celach informacyjnych. Uwaga: Ta wiadomość nie będzie rozsyłana w sieci Unbreakablecoin.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -2135,8 +2135,8 @@ Adres: %4
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Bitcoin Core is shutting down...</source>
-        <translation>Bitcoin Core się zamyka...</translation>
+        <source>Unbreakablecoin Core is shutting down...</source>
+        <translation>Unbreakablecoin Core się zamyka...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2158,8 +2158,8 @@ Adres: %4
         <translation>Możesz podpisywać wiadomości swoimi adresami aby udowodnić, że jesteś ich właścicielem. Uważaj, aby nie podpisywać niczego co wzbudza Twoje podejrzenia, ponieważ ktoś może stosować phishing próbując nakłonić Cię do ich podpisania. Akceptuj i podpisuj tylko w pełni zrozumiałe komunikaty i wiadomości.</translation>
     </message>
     <message>
-        <source>The Bitcoin address to sign the message with</source>
-        <translation>Adres Bitcoin, za pomocą którego podpisać wiadomość</translation>
+        <source>The Unbreakablecoin address to sign the message with</source>
+        <translation>Adres Unbreakablecoin, za pomocą którego podpisać wiadomość</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2190,7 +2190,7 @@ Adres: %4
         <translation>Kopiuje aktualny podpis do schowka systemowego</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Bitcoin address</source>
+        <source>Sign the message to prove you own this Unbreakablecoin address</source>
         <translation>Podpisz wiadomość aby dowieść, że ten adres jest twój</translation>
     </message>
     <message>
@@ -2214,12 +2214,12 @@ Adres: %4
         <translation>Wpisz adres podpisu, wiadomość (upewnij się, że dokładnie skopiujesz wszystkie zakończenia linii, spacje, tabulacje itp.) oraz podpis poniżej by sprawdzić wiadomość. Uważaj by nie dodać więcej do podpisu niż do samej podpisywanej wiadomości by uniknąć ataku man-in-the-middle (człowiek pośrodku)</translation>
     </message>
     <message>
-        <source>The Bitcoin address the message was signed with</source>
-        <translation>Adres Bitcoin, którym została podpisana wiadomość</translation>
+        <source>The Unbreakablecoin address the message was signed with</source>
+        <translation>Adres Unbreakablecoin, którym została podpisana wiadomość</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
-        <translation>Zweryfikuj wiadomość,  aby upewnić się, że została podpisana odpowiednim adresem Bitcoin.</translation>
+        <source>Verify the message to ensure it was signed with the specified Unbreakablecoin address</source>
+        <translation>Zweryfikuj wiadomość,  aby upewnić się, że została podpisana odpowiednim adresem Unbreakablecoin.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2285,12 +2285,12 @@ Adres: %4
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Rdzeń Bitcoin</translation>
+        <source>Unbreakablecoin Core</source>
+        <translation>Rdzeń Unbreakablecoin</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>Deweloperzy Bitcoin Core</translation>
+        <source>The Unbreakablecoin Core developers</source>
+        <translation>Deweloperzy Unbreakablecoin Core</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2769,7 +2769,7 @@ Adres: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>unbreakablecoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opcje:</translation>
@@ -2835,8 +2835,8 @@ Adres: %4
         <translation>To jest testowa wersja - używaj na własne ryzyko - nie używaj do wykopywania oraz przy aplikacjach kupieckich</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. Bitcoin Core is probably already running.</source>
-        <translation>Nie można przywiązać z portem %s na tym komputerze. Bitcoin Core prawdopodobnie już działa.</translation>
+        <source>Unable to bind to %s on this computer. Unbreakablecoin Core is probably already running.</source>
+        <translation>Nie można przywiązać z portem %s na tym komputerze. Unbreakablecoin Core prawdopodobnie już działa.</translation>
     </message>
     <message>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
@@ -3019,8 +3019,8 @@ Adres: %4
         <translation>Powiąż się z podanym adresem, aby nasłuchiwać połączenia JSON-RPC. Użyj notacji [host]:port dla IPv6. Ta opcja może być określona kilka razy (domyślnie: powiąż ze wszystkimi interfejsami)</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. Bitcoin Core is probably already running.</source>
-        <translation>Nie można uzyskać blokady na katalogu z danymi %s. Rdzeń Bitcoin najprawdopodobniej jest już uruchomiony.</translation>
+        <source>Cannot obtain a lock on data directory %s. Unbreakablecoin Core is probably already running.</source>
+        <translation>Nie można uzyskać blokady na katalogu z danymi %s. Rdzeń Unbreakablecoin najprawdopodobniej jest już uruchomiony.</translation>
     </message>
     <message>
         <source>Continuously rate-limit free transactions to &lt;n&gt;*1000 bytes per minute (default:%u)</source>
@@ -3087,27 +3087,27 @@ Adres: %4
         <translation>Program ten zawiera oprogramowanie stworzone przez OpenSSL Project do użycia w OpensSSL Toolkit &lt;https://www.openssl.org/&gt;, oprogramowanie kryptograficzne napisane przez Eric Young oraz oprogramowanie UPnP napisane przez Thomas Bernard.</translation>
     </message>
     <message>
-        <source>To use bitcoind, or the -server option to bitcoin-qt, you must set an rpcpassword in the configuration file:
+        <source>To use unbreakablecoind, or the -server option to unbreakablecoin-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=unbreakablecoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
+for example: alertnotify=echo %%s | mail -s "Unbreakablecoin Alert" admin@foo.com
 </source>
-        <translation>Aby korzystać z bitcoind, lub opcji -server w bitcoin-qt, musisz ustawić opcję rpcpassword w pliku konfiguracyjnym:
+        <translation>Aby korzystać z unbreakablecoind, lub opcji -server w unbreakablecoin-qt, musisz ustawić opcję rpcpassword w pliku konfiguracyjnym:
 %s
 Zalecane jest użycie poniższego losowego hasła:
-rpcuser=bitcoinrpc
+rpcuser=unbreakablecoinrpc
 rpcpassword=%s
 (nie musisz pamiętać tego hasła)
 Nazwa użytkownika i hasło NIE MOGĄ być takie same.
 Jeżeli ten plik nie istnieje, utwórz go z uprawnieniami tylko-do-odczytu przez właściciela.
 Zalecane jest także ustawienie opcji alertnotify, dzięki której będziesz powiadamiany o problemach;
-na przykład: alertnotify=echo %%s | mail -s "Alarm Bitcoin" admin@foo.com
+na przykład: alertnotify=echo %%s | mail -s "Alarm Unbreakablecoin" admin@foo.com
 </translation>
     </message>
     <message>
@@ -3115,8 +3115,8 @@ na przykład: alertnotify=echo %%s | mail -s "Alarm Bitcoin" admin@foo.com
         <translation>Ostrzeżenie: -matxfee jest ustawione bardzo wysokie! Tak wysokie opłaty mogą być zapłacone w jednej transakcji.</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Bitcoin Core will not work properly.</source>
-        <translation>Ostrzeżenie: Proszę sprawdzić czy data i czas na Twoim komputerze są poprawne! Jeżeli ustawienia zegara będą złe, Bitcoin Core nie będzie działał prawidłowo.</translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Unbreakablecoin Core will not work properly.</source>
+        <translation>Ostrzeżenie: Proszę sprawdzić czy data i czas na Twoim komputerze są poprawne! Jeżeli ustawienia zegara będą złe, Unbreakablecoin Core nie będzie działał prawidłowo.</translation>
     </message>
     <message>
         <source>Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway</source>
@@ -3135,16 +3135,16 @@ na przykład: alertnotify=echo %%s | mail -s "Alarm Bitcoin" admin@foo.com
         <translation>Połącz przez SOCKS5 proxy</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
-        <translation>Copyright (C) 2009-%i The Bitcoin Core Developers</translation>
+        <source>Copyright (C) 2009-%i The Unbreakablecoin Core Developers</source>
+        <translation>Copyright (C) 2009-%i The Unbreakablecoin Core Developers</translation>
     </message>
     <message>
         <source>Could not parse -rpcbind value %s as network address</source>
         <translation>Nie można przetworzyć wartości -rpcbind %s jako adresu sieciowego</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of Bitcoin Core</source>
-        <translation>Błąd ładowania wallet.dat: Portfel wymaga nowszej wersji Bitcoin Core</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Unbreakablecoin Core</source>
+        <translation>Błąd ładowania wallet.dat: Portfel wymaga nowszej wersji Unbreakablecoin Core</translation>
     </message>
     <message>
         <source>Error reading from database, shutting down.</source>
@@ -3167,8 +3167,8 @@ na przykład: alertnotify=echo %%s | mail -s "Alarm Bitcoin" admin@foo.com
         <translation>Informacja</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. Bitcoin Core is shutting down.</source>
-        <translation>Wstępna kontrola poprawności nie powiodła się. Bitcoin Core wyłącza się.</translation>
+        <source>Initialization sanity check failed. Unbreakablecoin Core is shutting down.</source>
+        <translation>Wstępna kontrola poprawności nie powiodła się. Unbreakablecoin Core wyłącza się.</translation>
     </message>
     <message>
         <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s'</source>
@@ -3199,8 +3199,8 @@ na przykład: alertnotify=echo %%s | mail -s "Alarm Bitcoin" admin@foo.com
         <translation>Opcje przekaźnikowe węzła:</translation>
     </message>
     <message>
-        <source>RPC SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
-        <translation>Opcje RPC SSL: (odwiedź Bitcoin Wiki w celu uzyskania instrukcji)</translation>
+        <source>RPC SSL options: (see the Unbreakablecoin Wiki for SSL setup instructions)</source>
+        <translation>Opcje RPC SSL: (odwiedź Unbreakablecoin Wiki w celu uzyskania instrukcji)</translation>
     </message>
     <message>
         <source>RPC server options:</source>
@@ -3271,8 +3271,8 @@ na przykład: alertnotify=echo %%s | mail -s "Alarm Bitcoin" admin@foo.com
         <translation>Nazwa użytkownika dla połączeń JSON-RPC</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart Bitcoin Core to complete</source>
-        <translation>Portfel wymaga przepisania: zrestartuj Bitcoina aby ukończyć</translation>
+        <source>Wallet needed to be rewritten: restart Unbreakablecoin Core to complete</source>
+        <translation>Portfel wymaga przepisania: zrestartuj Unbreakablecoina aby ukończyć</translation>
     </message>
     <message>
         <source>Warning</source>

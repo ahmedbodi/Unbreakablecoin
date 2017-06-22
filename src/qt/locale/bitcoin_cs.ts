@@ -66,12 +66,12 @@
         <translation>Přijímací adresy</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Tohle jsou tvé Bitcoinové adresy pro posílání plateb. Před odesláním mincí si vždy zkontroluj částku a cílovou adresu.</translation>
+        <source>These are your Unbreakablecoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Tohle jsou tvé Unbreakablecoinové adresy pro posílání plateb. Před odesláním mincí si vždy zkontroluj částku a cílovou adresu.</translation>
     </message>
     <message>
-        <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Tohle jsou tvé Bitcoinové adresy pro příjem plateb. Je doporučené používat pokaždé novou adresu pro každou transakci.</translation>
+        <source>These are your Unbreakablecoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Tohle jsou tvé Unbreakablecoinové adresy pro příjem plateb. Je doporučené používat pokaždé novou adresu pro každou transakci.</translation>
     </message>
     <message>
         <source>Copy &amp;Label</source>
@@ -164,8 +164,8 @@
         <translation>Potvrď zašifrování peněženky</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Upozornění: Pokud si zašifruješ peněženku a ztratíš či zapomeneš heslo, &lt;b&gt;PŘIJDEŠ O VŠECHNY BITCOINY&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR UNBREAKABLECOINS&lt;/b&gt;!</source>
+        <translation>Upozornění: Pokud si zašifruješ peněženku a ztratíš či zapomeneš heslo, &lt;b&gt;PŘIJDEŠ O VŠECHNY UNBREAKABLECOINY&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -188,8 +188,8 @@
         <translation>Zadej nové heslo k peněžence.&lt;br/&gt;Použij &lt;b&gt;alespoň deset náhodných znaků&lt;/b&gt; nebo &lt;b&gt;alespoň osm slov&lt;/b&gt;.</translation>
     </message>
     <message>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin se teď ukončí, aby dokončil zašifrování. Pamatuj však, že pouhé zašifrování peněženky úplně nezabraňuje krádeži tvých bitcoinů malwarem, kterým se může počítač nakazit.</translation>
+        <source>Unbreakablecoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your unbreakablecoins from being stolen by malware infecting your computer.</source>
+        <translation>Unbreakablecoin se teď ukončí, aby dokončil zašifrování. Pamatuj však, že pouhé zašifrování peněženky úplně nezabraňuje krádeži tvých unbreakablecoinů malwarem, kterým se může počítač nakazit.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
@@ -295,8 +295,8 @@
         <translation>Načíst &amp;URI...</translation>
     </message>
     <message>
-        <source>Bitcoin Core client</source>
-        <translation>Bitcoin Core klient</translation>
+        <source>Unbreakablecoin Core client</source>
+        <translation>Unbreakablecoin Core klient</translation>
     </message>
     <message>
         <source>Importing blocks from disk...</source>
@@ -307,12 +307,12 @@
         <translation>Vytvářím nový index bloků na disku...</translation>
     </message>
     <message>
-        <source>Send coins to a Bitcoin address</source>
-        <translation>Pošli mince na Bitcoinovou adresu</translation>
+        <source>Send coins to a Unbreakablecoin address</source>
+        <translation>Pošli mince na Unbreakablecoinovou adresu</translation>
     </message>
     <message>
-        <source>Modify configuration options for Bitcoin</source>
-        <translation>Uprav nastavení Bitcoinu</translation>
+        <source>Modify configuration options for Unbreakablecoin</source>
+        <translation>Uprav nastavení Unbreakablecoinu</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -335,8 +335,8 @@
         <translation>&amp;Ověř zprávu...</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Unbreakablecoin</source>
+        <translation>Unbreakablecoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -351,8 +351,8 @@
         <translation>Při&amp;jmi</translation>
     </message>
     <message>
-        <source>Show information about Bitcoin Core</source>
-        <translation>Zobraz informace o Bitcoin Core</translation>
+        <source>Show information about Unbreakablecoin Core</source>
+        <translation>Zobraz informace o Unbreakablecoin Core</translation>
     </message>
     <message>
         <source>&amp;Show / Hide</source>
@@ -367,12 +367,12 @@
         <translation>Zašifruj soukromé klíče ve své peněžence</translation>
     </message>
     <message>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
-        <translation>Podepiš zprávy svými Bitcoinovými adresami, čímž prokážeš, že jsi jejich vlastníkem</translation>
+        <source>Sign messages with your Unbreakablecoin addresses to prove you own them</source>
+        <translation>Podepiš zprávy svými Unbreakablecoinovými adresami, čímž prokážeš, že jsi jejich vlastníkem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation>Ověř zprávy, aby ses ujistil, že byly podepsány danými Bitcoinovými adresami</translation>
+        <source>Verify messages to ensure they were signed with specified Unbreakablecoin addresses</source>
+        <translation>Ověř zprávy, aby ses ujistil, že byly podepsány danými Unbreakablecoinovými adresami</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -391,16 +391,16 @@
         <translation>Panel s listy</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Unbreakablecoin Core</source>
+        <translation>Unbreakablecoin Core</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Požaduj platby (generuje QR kódy a bitcoin: URI)</translation>
+        <source>Request payments (generates QR codes and unbreakablecoin: URIs)</source>
+        <translation>Požaduj platby (generuje QR kódy a unbreakablecoin: URI)</translation>
     </message>
     <message>
-        <source>&amp;About Bitcoin Core</source>
-        <translation>O &amp;Bitcoin Core</translation>
+        <source>&amp;About Unbreakablecoin Core</source>
+        <translation>O &amp;Unbreakablecoin Core</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -411,20 +411,20 @@
         <translation>Ukaž seznam použitých přijímacích adres a jejich označení</translation>
     </message>
     <message>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Načti bitcoin: URI nebo platební požadavek</translation>
+        <source>Open a unbreakablecoin: URI or payment request</source>
+        <translation>Načti unbreakablecoin: URI nebo platební požadavek</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Ar&amp;gumenty z příkazové řádky</translation>
     </message>
     <message>
-        <source>Show the Bitcoin Core help message to get a list with possible Bitcoin command-line options</source>
-        <translation>Seznam argumentů Bitcoinu pro příkazovou řádku získáš v nápovědě Bitcoinu Core</translation>
+        <source>Show the Unbreakablecoin Core help message to get a list with possible Unbreakablecoin command-line options</source>
+        <translation>Seznam argumentů Unbreakablecoinu pro příkazovou řádku získáš v nápovědě Unbreakablecoinu Core</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Bitcoin network</source>
-        <translation><numerusform>%n aktivní spojení do Bitcoinové sítě</numerusform><numerusform>%n aktivní spojení do Bitcoinové sítě</numerusform><numerusform>%n aktivních spojení do Bitcoinové sítě</numerusform></translation>
+        <source>%n active connection(s) to Unbreakablecoin network</source>
+        <translation><numerusform>%n aktivní spojení do Unbreakablecoinové sítě</numerusform><numerusform>%n aktivní spojení do Unbreakablecoinové sítě</numerusform><numerusform>%n aktivních spojení do Unbreakablecoinové sítě</numerusform></translation>
     </message>
     <message>
         <source>No block source available...</source>
@@ -788,8 +788,8 @@ Adresa: %4
         <translation>Zadaná adresa "%1" už v adresáři je.</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Bitcoin address.</source>
-        <translation>Zadaná adresa "%1" není platná Bitcoinová adresa.</translation>
+        <source>The entered address "%1" is not a valid Unbreakablecoin address.</source>
+        <translation>Zadaná adresa "%1" není platná Unbreakablecoinová adresa.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -826,8 +826,8 @@ Adresa: %4
 <context>
     <name>HelpMessageDialog</name>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Unbreakablecoin Core</source>
+        <translation>Unbreakablecoin Core</translation>
     </message>
     <message>
         <source>version</source>
@@ -838,8 +838,8 @@ Adresa: %4
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About Bitcoin Core</source>
-        <translation>O Bitcoin Core</translation>
+        <source>About Unbreakablecoin Core</source>
+        <translation>O Unbreakablecoin Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -885,16 +885,16 @@ Adresa: %4
         <translation>Vítej</translation>
     </message>
     <message>
-        <source>Welcome to Bitcoin Core.</source>
-        <translation>Vítej v Bitcoin Core.</translation>
+        <source>Welcome to Unbreakablecoin Core.</source>
+        <translation>Vítej v Unbreakablecoin Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where Bitcoin Core will store its data.</source>
-        <translation>Tohle je poprvé, co spouštíš Bitcoin Core, takže si můžeš zvolit, kam bude ukládat svá data.</translation>
+        <source>As this is the first time the program is launched, you can choose where Unbreakablecoin Core will store its data.</source>
+        <translation>Tohle je poprvé, co spouštíš Unbreakablecoin Core, takže si můžeš zvolit, kam bude ukládat svá data.</translation>
     </message>
     <message>
-        <source>Bitcoin Core will download and store a copy of the Bitcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Bitcoin Core bude stahovat kopii řetězce bloků. Proto bude potřeba do tohoto adresáře uložit nejméně %1 GB dat – toto číslo bude navíc v průběhu času pomalu růst. Tvá peněženka bude rovněž uložena v tomto adresáři.</translation>
+        <source>Unbreakablecoin Core will download and store a copy of the Unbreakablecoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Unbreakablecoin Core bude stahovat kopii řetězce bloků. Proto bude potřeba do tohoto adresáře uložit nejméně %1 GB dat – toto číslo bude navíc v průběhu času pomalu růst. Tvá peněženka bude rovněž uložena v tomto adresáři.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -905,8 +905,8 @@ Adresa: %4
         <translation>Použij tento adresář pro data:</translation>
     </message>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Unbreakablecoin Core</source>
+        <translation>Unbreakablecoin Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -959,12 +959,12 @@ Adresa: %4
         <translation>&amp;Hlavní</translation>
     </message>
     <message>
-        <source>Automatically start Bitcoin after logging in to the system.</source>
-        <translation>Automaticky spustí Bitcoin po přihlášení do systému.</translation>
+        <source>Automatically start Unbreakablecoin after logging in to the system.</source>
+        <translation>Automaticky spustí Unbreakablecoin po přihlášení do systému.</translation>
     </message>
     <message>
-        <source>&amp;Start Bitcoin on system login</source>
-        <translation>S&amp;pustit Bitcoin po přihlášení do systému</translation>
+        <source>&amp;Start Unbreakablecoin on system login</source>
+        <translation>S&amp;pustit Unbreakablecoin po přihlášení do systému</translation>
     </message>
     <message>
         <source>Size of &amp;database cache</source>
@@ -1039,7 +1039,7 @@ Adresa: %4
         <translation>&amp;Utrácet i ještě nepotvrzené drobné</translation>
     </message>
     <message>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Unbreakablecoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Automaticky otevře potřebný port na routeru. Tohle funguje jen za předpokladu, že tvůj router podporuje UPnP a že je UPnP povolené.</translation>
     </message>
     <message>
@@ -1047,8 +1047,8 @@ Adresa: %4
         <translation>Namapovat port přes &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Bitcoin network through a SOCKS5 proxy.</source>
-        <translation>Připojí se do Bitcoinové sítě přes SOCKS5 proxy.</translation>
+        <source>Connect to the Unbreakablecoin network through a SOCKS5 proxy.</source>
+        <translation>Připojí se do Unbreakablecoinové sítě přes SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1095,8 +1095,8 @@ Adresa: %4
         <translation>&amp;Jazyk uživatelského rozhraní:</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting Bitcoin.</source>
-        <translation>Tady lze nastavit jazyk uživatelského rozhraní. Nastavení se projeví až po restartování Bitcoinu.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Unbreakablecoin.</source>
+        <translation>Tady lze nastavit jazyk uživatelského rozhraní. Nastavení se projeví až po restartování Unbreakablecoinu.</translation>
     </message>
     <message>
         <source>&amp;Unit to show amounts in:</source>
@@ -1154,8 +1154,8 @@ Adresa: %4
         <translation>Formulář</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Zobrazené informace nemusí být aktuální. Tvá peněženka se automaticky sesynchronizuje s Bitcoinovou sítí, jakmile se s ní spojí. Zatím ale ještě není synchronizace dokončena.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Unbreakablecoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Zobrazené informace nemusí být aktuální. Tvá peněženka se automaticky sesynchronizuje s Unbreakablecoinovou sítí, jakmile se s ní spojí. Zatím ale ještě není synchronizace dokončena.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1261,16 +1261,16 @@ Adresa: %4
         <translation>Chyba platebního požadavku</translation>
     </message>
     <message>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>Nemůžu spustit bitcoin: obsluha click-to-pay</translation>
+        <source>Cannot start unbreakablecoin: click-to-pay handler</source>
+        <translation>Nemůžu spustit unbreakablecoin: obsluha click-to-pay</translation>
     </message>
     <message>
         <source>Payment request fetch URL is invalid: %1</source>
         <translation>Zdrojová URL platebního požadavku není platná: %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
-        <translation>Nepodařilo se analyzovat URI! Důvodem může být neplatná Bitcoinová adresa nebo poškozené parametry URI.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Unbreakablecoin address or malformed URI parameters.</source>
+        <translation>Nepodařilo se analyzovat URI! Důvodem může být neplatná Unbreakablecoinová adresa nebo poškozené parametry URI.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1339,8 +1339,8 @@ Adresa: %4
         <translation>Částka</translation>
     </message>
     <message>
-        <source>Enter a Bitcoin address (e.g. %1)</source>
-        <translation>Zadej Bitcoinovou adresu (např. %1)</translation>
+        <source>Enter a Unbreakablecoin address (e.g. %1)</source>
+        <translation>Zadej Unbreakablecoinovou adresu (např. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1565,16 +1565,16 @@ Adresa: %4
         <translation>Soubor s ladicími záznamy</translation>
     </message>
     <message>
-        <source>Open the Bitcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Otevři soubor s ladicími záznamy Bitcoinu z aktuálního datového adresáře. U velkých logů to může pár vteřin zabrat.</translation>
+        <source>Open the Unbreakablecoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Otevři soubor s ladicími záznamy Unbreakablecoinu z aktuálního datového adresáře. U velkých logů to může pár vteřin zabrat.</translation>
     </message>
     <message>
         <source>Clear console</source>
         <translation>Vyčistit konzoli</translation>
     </message>
     <message>
-        <source>Welcome to the Bitcoin RPC console.</source>
-        <translation>Vítej v Bitcoinové RPC konzoli.</translation>
+        <source>Welcome to the Unbreakablecoin RPC console.</source>
+        <translation>Vítej v Unbreakablecoinové RPC konzoli.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
@@ -1648,8 +1648,8 @@ Adresa: %4
         <translation>&amp;Recyklovat již existující adresy (nedoporučeno)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin network.</source>
-        <translation>Volitelná zpráva, která se připojí k platebnímu požadavku a která se zobrazí, když se požadavek otevře. Poznámka: Tahle zpráva se neposílá s platbou po Bitcoinové síti.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Unbreakablecoin network.</source>
+        <translation>Volitelná zpráva, která se připojí k platebnímu požadavku a která se zobrazí, když se požadavek otevře. Poznámka: Tahle zpráva se neposílá s platbou po Unbreakablecoinové síti.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1885,8 +1885,8 @@ Adresa: %4
         <translation>přinejmenším</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitcoin transactions than the network can process.</source>
-        <translation>Platit jen minimální poplatek je v pořádku, pokud je zrovna méně transakcí než místa v blocích. Ale počítej s tím, že to také může skončit transakcí, která nikdy nebude potvrzena, pokud je větší poptávka po bitcoinových transakcích, než síť zvládne zpracovat.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for unbreakablecoin transactions than the network can process.</source>
+        <translation>Platit jen minimální poplatek je v pořádku, pokud je zrovna méně transakcí než místa v blocích. Ale počítej s tím, že to také může skončit transakcí, která nikdy nebude potvrzena, pokud je větší poptávka po unbreakablecoinových transakcích, než síť zvládne zpracovat.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -2037,8 +2037,8 @@ Adresa: %4
         <translation>Potvrzování by podle odhadu mělo začít během %1 bloků.</translation>
     </message>
     <message>
-        <source>Warning: Invalid Bitcoin address</source>
-        <translation>Upozornění: Neplatná Bitcoinová adresa</translation>
+        <source>Warning: Invalid Unbreakablecoin address</source>
+        <translation>Upozornění: Neplatná Unbreakablecoinová adresa</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -2088,8 +2088,8 @@ Adresa: %4
         <translation>Tohle je normální platba.</translation>
     </message>
     <message>
-        <source>The Bitcoin address to send the payment to</source>
-        <translation>Bitcoinová adresa příjemce</translation>
+        <source>The Unbreakablecoin address to send the payment to</source>
+        <translation>Unbreakablecoinová adresa příjemce</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2120,8 +2120,8 @@ Adresa: %4
         <translation>Zadej označení této adresy; obojí se ti pak uloží do adresáře</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>Zpráva, která byla připojena k bitcoin: URI a která se ti pro přehled uloží k transakci. Poznámka: Tahle zpráva se neposílá s platbou po Bitcoinové síti.</translation>
+        <source>A message that was attached to the unbreakablecoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Unbreakablecoin network.</source>
+        <translation>Zpráva, která byla připojena k unbreakablecoin: URI a která se ti pro přehled uloží k transakci. Poznámka: Tahle zpráva se neposílá s platbou po Unbreakablecoinové síti.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -2139,8 +2139,8 @@ Adresa: %4
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>Bitcoin Core is shutting down...</source>
-        <translation>Bitcoin Core se ukončuje...</translation>
+        <source>Unbreakablecoin Core is shutting down...</source>
+        <translation>Unbreakablecoin Core se ukončuje...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -2162,8 +2162,8 @@ Adresa: %4
         <translation>Podepsáním zprávy svými adresami můžeš prokázat, že je skutečně vlastníš. Buď opatrný a nepodepisuj nic vágního; například při phishingových útocích můžeš být lákán, abys něco takového podepsal. Podepisuj pouze zcela úplná a detailní prohlášení, se kterými souhlasíš.</translation>
     </message>
     <message>
-        <source>The Bitcoin address to sign the message with</source>
-        <translation>Bitcoinová adresa, kterou se zpráva podepíše</translation>
+        <source>The Unbreakablecoin address to sign the message with</source>
+        <translation>Unbreakablecoinová adresa, kterou se zpráva podepíše</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2194,8 +2194,8 @@ Adresa: %4
         <translation>Zkopíruj aktuálně vybraný podpis do systémové schránky</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Bitcoin address</source>
-        <translation>Podepiš zprávu, čímž prokážeš, že jsi vlastníkem této Bitcoinové adresy</translation>
+        <source>Sign the message to prove you own this Unbreakablecoin address</source>
+        <translation>Podepiš zprávu, čímž prokážeš, že jsi vlastníkem této Unbreakablecoinové adresy</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2218,12 +2218,12 @@ Adresa: %4
         <translation>K ověření podpisu zprávy zadej podepisující adresu, zprávu (ověř si, že správně kopíruješ zalomení řádků, mezery, tabulátory apod.) a podpis. Dávej pozor na to, abys nezkopíroval do podpisu víc, než co je v samotné podepsané zprávě, abys nebyl napálen man-in-the-middle útokem.</translation>
     </message>
     <message>
-        <source>The Bitcoin address the message was signed with</source>
-        <translation>Bitcoinová adresa, kterou je zpráva podepsána</translation>
+        <source>The Unbreakablecoin address the message was signed with</source>
+        <translation>Unbreakablecoinová adresa, kterou je zpráva podepsána</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
-        <translation>Ověř zprávu, aby ses ujistil, že byla podepsána danou Bitcoinovou adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified Unbreakablecoin address</source>
+        <translation>Ověř zprávu, aby ses ujistil, že byla podepsána danou Unbreakablecoinovou adresou</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2289,12 +2289,12 @@ Adresa: %4
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Unbreakablecoin Core</source>
+        <translation>Unbreakablecoin Core</translation>
     </message>
     <message>
-        <source>The Bitcoin Core developers</source>
-        <translation>Vývojáři Bitcoin Core</translation>
+        <source>The Unbreakablecoin Core developers</source>
+        <translation>Vývojáři Unbreakablecoin Core</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -2777,7 +2777,7 @@ Adresa: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>unbreakablecoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Možnosti:</translation>
@@ -2843,8 +2843,8 @@ Adresa: %4
         <translation>Tohle je testovací verze – používej ji jen na vlastní riziko, ale rozhodně ji nepoužívej k těžbě nebo pro obchodní aplikace</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. Bitcoin Core is probably already running.</source>
-        <translation>Nedaří se mi připojit na %s na tomhle počítači. Bitcoin Core už pravděpodobně jednou běží.</translation>
+        <source>Unable to bind to %s on this computer. Unbreakablecoin Core is probably already running.</source>
+        <translation>Nedaří se mi připojit na %s na tomhle počítači. Unbreakablecoin Core už pravděpodobně jednou běží.</translation>
     </message>
     <message>
         <source>Warning: -paytxfee is set very high! This is the transaction fee you will pay if you send a transaction.</source>
@@ -3027,8 +3027,8 @@ Adresa: %4
         <translation>Čekat na zadané adrese na JSON-RPC spojení. Pro zápis IPv6 adresy použij notaci [adresa]:port. Tuto volbu lze použít i vícekrát (výchozí: poslouchat na všech rozhraních)</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. Bitcoin Core is probably already running.</source>
-        <translation>Nedaří se mi získat zámek na datový adresář %s. Bitcoin Core pravděpodobně už jednou běží.</translation>
+        <source>Cannot obtain a lock on data directory %s. Unbreakablecoin Core is probably already running.</source>
+        <translation>Nedaří se mi získat zámek na datový adresář %s. Unbreakablecoin Core pravděpodobně už jednou běží.</translation>
     </message>
     <message>
         <source>Continuously rate-limit free transactions to &lt;n&gt;*1000 bytes per minute (default:%u)</source>
@@ -3095,27 +3095,27 @@ Adresa: %4
         <translation>Tento produkt zahrnuje programy vyvinuté OpenSSL Projektem pro použití v OpenSSL Toolkitu &lt;https://www.openssl.org/&gt; a kryptografický program od Erika Younga a program UPnP od Thomase Bernarda.</translation>
     </message>
     <message>
-        <source>To use bitcoind, or the -server option to bitcoin-qt, you must set an rpcpassword in the configuration file:
+        <source>To use unbreakablecoind, or the -server option to unbreakablecoin-qt, you must set an rpcpassword in the configuration file:
 %s
 It is recommended you use the following random password:
-rpcuser=bitcoinrpc
+rpcuser=unbreakablecoinrpc
 rpcpassword=%s
 (you do not need to remember this password)
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
+for example: alertnotify=echo %%s | mail -s "Unbreakablecoin Alert" admin@foo.com
 </source>
-        <translation>K používání bitcoind nebo volby -server u bitcoin-qt musíš nastavit rpcpassword v konfiguračním souboru:
+        <translation>K používání unbreakablecoind nebo volby -server u unbreakablecoin-qt musíš nastavit rpcpassword v konfiguračním souboru:
 %s
 Je vhodné použít následující náhodné heslo:
-rpcuser=bitcoinrpc
+rpcuser=unbreakablecoinrpc
 rpcpassword=%s
 (není potřeba si ho pamatovat)
 rpcuser a rpcpassword NESMÍ být stejné.
 Pokud konfigurační soubor ještě neexistuje, vytvoř ho tak, aby ho mohl číst pouze vlastník.
 Je také doporučeno si nastavit alertnotify, abys byl upozorněn na případné problémy;
-například: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
+například: alertnotify=echo %%s | mail -s "Unbreakablecoin Alert" admin@foo.com
 </translation>
     </message>
     <message>
@@ -3123,8 +3123,8 @@ například: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>Upozornění: -maxtxfee je nastaveno velmi vysoko! Takto vysoký poplatek může být zaplacen v jednotlivé transakci.</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Bitcoin Core will not work properly.</source>
-        <translation>Upozornění: Zkontroluj, že máš v počítači správně nastavený datum a čas! Pokud jsou nastaveny špatně, Bitcoin Core nebude fungovat správně.</translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Unbreakablecoin Core will not work properly.</source>
+        <translation>Upozornění: Zkontroluj, že máš v počítači správně nastavený datum a čas! Pokud jsou nastaveny špatně, Unbreakablecoin Core nebude fungovat správně.</translation>
     </message>
     <message>
         <source>Whitelisted peers cannot be DoS banned and their transactions are always relayed, even if they are already in the mempool, useful e.g. for a gateway</source>
@@ -3143,16 +3143,16 @@ například: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>Připojit se přes SOCKS5 proxy</translation>
     </message>
     <message>
-        <source>Copyright (C) 2009-%i The Bitcoin Core Developers</source>
-        <translation>Copyright (C) 2009-%i Vývojáři Bitcoin Core</translation>
+        <source>Copyright (C) 2009-%i The Unbreakablecoin Core Developers</source>
+        <translation>Copyright (C) 2009-%i Vývojáři Unbreakablecoin Core</translation>
     </message>
     <message>
         <source>Could not parse -rpcbind value %s as network address</source>
         <translation>Nejde mi přečíst hodnotu -rpcbind %s jako síťovou adresu</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of Bitcoin Core</source>
-        <translation>Chyba při načítání wallet.dat: peněženka vyžaduje novější verzi Bitcoin Core</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Unbreakablecoin Core</source>
+        <translation>Chyba při načítání wallet.dat: peněženka vyžaduje novější verzi Unbreakablecoin Core</translation>
     </message>
     <message>
         <source>Error reading from database, shutting down.</source>
@@ -3171,8 +3171,8 @@ například: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>Informace</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. Bitcoin Core is shutting down.</source>
-        <translation>Selhala úvodní zevrubná prověrka. Bitcoin Core se ukončuje.</translation>
+        <source>Initialization sanity check failed. Unbreakablecoin Core is shutting down.</source>
+        <translation>Selhala úvodní zevrubná prověrka. Unbreakablecoin Core se ukončuje.</translation>
     </message>
     <message>
         <source>Invalid amount for -maxtxfee=&lt;amount&gt;: '%s'</source>
@@ -3207,8 +3207,8 @@ například: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>Možnosti přeposílání:</translation>
     </message>
     <message>
-        <source>RPC SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
-        <translation>Možnosti SSL pro RPC: (viz instrukce nastavení SSL na Bitcoin Wiki)</translation>
+        <source>RPC SSL options: (see the Unbreakablecoin Wiki for SSL setup instructions)</source>
+        <translation>Možnosti SSL pro RPC: (viz instrukce nastavení SSL na Unbreakablecoin Wiki)</translation>
     </message>
     <message>
         <source>RPC server options:</source>
@@ -3279,8 +3279,8 @@ například: alertnotify=echo %%s | mail -s "Bitcoin Alert" admin@foo.com
         <translation>Uživatelské jméno pro JSON-RPC spojení</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart Bitcoin Core to complete</source>
-        <translation>Soubor s peněženkou potřeboval přepsat: restartuj Bitcoin Core, aby se operace dokončila</translation>
+        <source>Wallet needed to be rewritten: restart Unbreakablecoin Core to complete</source>
+        <translation>Soubor s peněženkou potřeboval přepsat: restartuj Unbreakablecoin Core, aby se operace dokončila</translation>
     </message>
     <message>
         <source>Warning</source>

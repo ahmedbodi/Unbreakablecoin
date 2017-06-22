@@ -35,8 +35,8 @@
         <translation>Билдирүүнү &amp;текшерүү...</translation>
     </message>
     <message>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Unbreakablecoin</source>
+        <translation>Unbreakablecoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -321,7 +321,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>unbreakablecoin-core</name>
     <message>
         <source>Information</source>
         <translation>Маалымат</translation>
