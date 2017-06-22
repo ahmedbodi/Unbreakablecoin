@@ -12,6 +12,7 @@
 #include "addrman.h"
 #include "chainparams.h"
 #include "clientversion.h"
+#include "main.h"
 #include "primitives/transaction.h"
 #include "ui_interface.h"
 
@@ -464,6 +465,16 @@ void CNode::PushVersion()
                 nLocalHostNonce, FormatSubVersion(CLIENT_NAME, CLIENT_VERSION, std::vector<string>()), nBestHeight, true);
 }
 
+void CNode::PushGetBlocks(CBlockIndex* pindexBegin, uint256 hashEnd)
+{
+    // Filter out duplicate requests
+    if (pindexBegin == pindexLastGetBlocksBegin && hashEnd == hashLastGetBlocksEnd)
+        return;
+    pindexLastGetBlocksBegin = pindexBegin;
+    hashLastGetBlocksEnd = hashEnd;
+
+    PushMessage("getblocks", chainActive.GetLocator(pindexBegin), hashEnd);
+}
 
 
 
@@ -1978,6 +1989,8 @@ CNode::CNode(SOCKET hSocketIn, CAddress addrIn, std::string addrNameIn, bool fIn
     nSendSize = 0;
     nSendOffset = 0;
     hashContinue = 0;
+    pindexLastGetBlocksBegin = 0;
+    hashLastGetBlocksEnd = uint256();
     nStartingHeight = -1;
     fGetAddr = false;
     fRelayTxes = false;
@@ -1987,6 +2000,7 @@ CNode::CNode(SOCKET hSocketIn, CAddress addrIn, std::string addrNameIn, bool fIn
     nPingUsecStart = 0;
     nPingUsecTime = 0;
     fPingQueued = false;
+    hashCheckpointKnown = 0;
 
     {
         LOCK(cs_nLastNodeId);

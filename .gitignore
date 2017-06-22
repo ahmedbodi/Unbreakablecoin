@@ -1,12 +1,12 @@
 *.tar.gz
 
 *.exe
-src/bitcoin
-src/bitcoind
-src/bitcoin-cli
-src/bitcoin-tx
-src/test/test_bitcoin
-src/qt/test/test_bitcoin-qt
+src/unbreakablecoin
+src/unbreakablecoind
+src/unbreakablecoin-cli
+src/unbreakablecoin-tx
+src/test/test_unbreakablecoin
+src/qt/test/test_unbreakablecoin-qt
 
 # autoreconf
 Makefile.in
@@ -55,7 +55,7 @@ src/qt/test/moc*.cpp
 *.o
 *.o-*
 *.patch
-.bitcoin
+.unbreakablecoin
 *.a
 *.pb.cc
 *.pb.h
@@ -74,12 +74,12 @@ src/qt/test/moc*.cpp
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-bitcoin-qt
-Bitcoin-Qt.app
+unbreakablecoin-qt
+Unbreakablecoin-Qt.app
 
 # Unit-tests
 Makefile.test
-bitcoin-qt_test
+unbreakablecoin-qt_test
 src/test/buildenv.py
 
 # Resources cpp
@@ -95,7 +95,7 @@ build
 #lcov
 *.gcno
 /*.info
-test_bitcoin.coverage/
+test_unbreakablecoin.coverage/
 total.coverage/
 coverage_percent.txt
 

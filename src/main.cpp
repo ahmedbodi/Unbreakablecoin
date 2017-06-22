@@ -9,6 +9,7 @@
 #include "alert.h"
 #include "chainparams.h"
 #include "checkpoints.h"
+#include "checkpointsync.h"
 #include "checkqueue.h"
 #include "init.h"
 #include "merkleblock.h"
@@ -41,6 +42,7 @@ using namespace std;
 CCriticalSection cs_main;
 
 BlockMap mapBlockIndex;
+map<uint256, CBlock*> mapOrphanBlocksA;
 CChain chainActive;
 CBlockIndex *pindexBestHeader = NULL;
 int64_t nTimeBestReceived = 0;
@@ -1060,7 +1062,7 @@ bool AcceptToMemoryPool(CTxMemPool& pool, CValidationState &state, const CTransa
             LOCK(csFreeLimiter);
 
             // Use an exponentially decaying ~10-minute window:
-            dFreeCount *= pow(1.0 - 1.0/600.0, (double)(nNow - nLastTime));
+            dFreeCount *= pow(1.0 - 1.0/100.0, (double)(nNow - nLastTime));
             nLastTime = nNow;
             // -limitfreerelay unit is thousand-bytes-per-minute
             // At default rate it would take over a month to fill 1GB
@@ -1238,13 +1240,11 @@ CAmount GetBlockValue(int nHeight, const CAmount& nFees)
     CAmount nSubsidy = 50 * COIN;
     int halvings = nHeight / Params().SubsidyHalvingInterval();
 
-    // Force block reward to zero when right shift is undefined.
-    if (halvings >= 64)
-        return nFees;
-
     // Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.
     nSubsidy >>= halvings;
 
+	if (nSubsidy <= 0)
+		nSubsidy = 0;
     return nSubsidy + nFees;
 }
 
@@ -1256,8 +1256,7 @@ bool IsInitialBlockDownload()
     static bool lockIBDState = false;
     if (lockIBDState)
         return false;
-    bool state = (chainActive.Height() < pindexBestHeader->nHeight - 24 * 6 ||
-            pindexBestHeader->GetBlockTime() < GetTime() - 24 * 60 * 60);
+    bool state = false;
     if (!state)
         lockIBDState = true;
     return state;
@@ -1882,6 +1881,25 @@ void FlushStateToDisk() {
     FlushStateToDisk(state, FLUSH_STATE_ALWAYS);
 }
 
+bool static WriteChainState(CValidationState &state) {
+    static int64_t nLastWrite = 0;
+    if (!IsInitialBlockDownload() || pcoinsTip->GetCacheSize() > nCoinCacheSize || GetTimeMicros() > nLastWrite + 600*1000000) {
+        // Typical CCoins structures on disk are around 100 bytes in size.
+        // Pushing a new one to the database can cause it to be written
+        // twice (once in the log, and once in the tables). This is already
+        // an overestimation, as most will delete an existing entry or
+        // overwrite one. Still, use a conservative safety factor of 2.
+        if (!CheckDiskSpace(100 * 2 * 2 * pcoinsTip->GetCacheSize()))
+            return state.Error("out of disk space");
+        FlushBlockFile();
+        pblocktree->Sync();
+        if (!pcoinsTip->Flush())
+            return state.Abort(_("Failed to write to coin database"));
+        nLastWrite = GetTimeMicros();
+    }
+    return true;
+}
+
 /** Update chainActive and related internal data structures. */
 void static UpdateTip(CBlockIndex *pindexNew) {
     chainActive.SetTip(pindexNew);
@@ -1918,6 +1936,14 @@ void static UpdateTip(CBlockIndex *pindexNew) {
             CAlert::Notify(strMiscWarning, true);
             fWarned = true;
         }
+    }
+
+    if (!IsSyncCheckpointEnforced()) // checkpoint advisory mode
+    {
+        if (chainActive.Tip()->pprev && !CheckSyncCheckpoint(chainActive.Tip()->GetBlockHash(), chainActive.Tip()->pprev))
+            strCheckpointWarning = _("Warning: checkpoint on different blockchain fork, contact developers to resolve the issue");
+        else
+            strCheckpointWarning = "";
     }
 }
 
@@ -2275,6 +2301,143 @@ bool ReconsiderBlock(CValidationState& state, CBlockIndex *pindex) {
     return true;
 }
 
+//for 0.8.7 ACP
+bool SetBestChain(CValidationState &state, CBlockIndex* pindexNew)
+{
+    LOCK(cs_main);
+    CBlockIndex *pindexOldTip = chainActive.Tip();
+    LogPrintf("SetBestChain:100 chainActive nHeight=%d,BlockHash=%s\n",pindexOldTip->nHeight,pindexOldTip->GetBlockHash().ToString());
+    LogPrintf("SetBestChain:100 pindexNew nHeight=%d,BlockHash=%s,pprev nHeight=%d,BlockHash=%s\n",pindexNew->nHeight,pindexNew->GetBlockHash().ToString(),pindexNew->pprev->nHeight,pindexNew->pprev->GetBlockHash().ToString());
+
+    // Check whether we have something to do.
+    if (pindexNew == NULL)
+        return true;
+
+    if (pindexNew == pindexOldTip)
+        return true;
+
+    // All modifications to the coin state will be done in this cache.
+    // Only when all have succeeded, we push it to pcoinsTip.
+    CCoinsViewCache view(*pcoinsTip);
+
+    // Find the fork
+    CBlockIndex* pfork = pindexOldTip;
+    CBlockIndex* plonger = pindexNew;
+    while (pfork && pfork != plonger)
+    {
+        while (plonger->nHeight > pfork->nHeight) {
+            plonger = plonger->pprev;
+            assert(plonger != NULL);
+        }
+        if (pfork == plonger)
+            break;
+        pfork = pfork->pprev;
+        assert(pfork != NULL);
+    }
+    LogPrintf("SetBestChain:110 pfork nHeight=%d,BlockHash=%s\n",pfork->nHeight,pfork->GetBlockHash().ToString());
+
+    // List of what to disconnect
+    vector<CBlockIndex*> vDisconnect;
+    for (CBlockIndex* pindex = pindexOldTip; pindex != pfork; pindex = pindex->pprev)
+        vDisconnect.push_back(pindex);
+
+    // List of what to connect (typically only pindexNew)
+    vector<CBlockIndex*> vConnect;
+    for (CBlockIndex* pindex = pindexNew; pindex != pfork; pindex = pindex->pprev)
+        vConnect.push_back(pindex);
+    reverse(vConnect.begin(), vConnect.end());
+
+    if (vDisconnect.size() > 0) {
+        LogPrintf("SetBestChain:120: Disconnect %i blocks; %s...\n", vDisconnect.size(), pfork->GetBlockHash().ToString());
+        LogPrintf("SetBestChain:120: Connect %i  blocks; ...%s\n", vConnect.size(), pindexNew->GetBlockHash().ToString());
+    }
+
+    // Disconnect shorter branch
+    vector<CTransaction> vResurrect;
+    BOOST_FOREACH(CBlockIndex* pindex, vDisconnect) {
+        CBlock block;
+        if (!ReadBlockFromDisk(block, pindex))
+            return state.Abort(_("Failed to read block"));
+        int64_t nStart = GetTimeMicros();
+        bool fClean = true;
+        if (!DisconnectBlock(block, state, pindex, view, &fClean))
+            return error("SetBestBlock() : DisconnectBlock %s failed", pindex->GetBlockHash().ToString().c_str());
+        if (fDebug)
+            LogPrintf("- Disconnect: %.2fms\n", (GetTimeMicros() - nStart) * 0.001);
+
+        // Queue memory transactions to resurrect.
+        // We only do this for blocks after the last checkpoint (reorganisation before that
+        // point should only happen with -reindex/-loadblock, or a misbehaving peer.
+        BOOST_FOREACH(const CTransaction& tx, block.vtx)
+            if (!tx.IsCoinBase() && pindex->nHeight > Checkpoints::GetTotalBlocksEstimate())
+                vResurrect.push_back(tx);
+    }
+
+    // Connect longer branch
+    vector<CTransaction> vDelete;
+    BOOST_FOREACH(CBlockIndex *pindex, vConnect) {
+        CBlock block;
+        if (!ReadBlockFromDisk(block, pindex))
+            return state.Abort(_("Failed to read block"));
+        int64_t nStart = GetTimeMicros();
+        if (!ConnectBlock(block, state, pindex, view)) {
+            if (state.IsInvalid()) {
+                InvalidChainFound(pindexNew);
+                InvalidBlockFound(pindex,state);
+            }
+            return error("SetBestBlock() : ConnectBlock %s failed", pindex->GetBlockHash().ToString().c_str());
+        }
+        if (fDebug)
+            LogPrintf("- Connect: %.2fms\n", (GetTimeMicros() - nStart) * 0.001);
+
+        // Queue memory transactions to delete
+        BOOST_FOREACH(const CTransaction& tx, block.vtx)
+            vDelete.push_back(tx);
+    }
+    LogPrintf("SetBestChain:130: \n");
+
+    // Flush changes to global coin state
+    int64_t nStart = GetTimeMicros();
+    int nModified = view.GetCacheSize();
+    assert(view.Flush());
+    int64_t nTime = GetTimeMicros() - nStart;
+    if (fDebug)
+        LogPrintf("- Flush %i transactions: %.2fms (%.4fms/tx)\n", nModified, 0.001 * nTime, 0.001 * nTime / nModified);
+
+    if (!WriteChainState(state))
+        return false;
+
+    // Resurrect memory transactions that were in the disconnected branch
+    BOOST_FOREACH(CTransaction& tx, vResurrect) {
+        // ignore validation errors in resurrected transactions
+        CValidationState stateDummy;
+        list<CTransaction> removed;
+        if (!AcceptToMemoryPool(mempool, stateDummy, tx, false, NULL))
+            mempool.remove(tx, removed, true);
+    }
+
+    // Delete redundant memory transactions that are in the connected branch
+    list<CTransaction> txConflicted;
+    BOOST_FOREACH(CTransaction& tx, vDelete) {
+        list<CTransaction> removed;
+        mempool.remove(tx, removed);
+        mempool.removeConflicts(tx, txConflicted);
+    }
+
+    mempool.check(pcoinsTip);
+    LogPrintf("SetBestChain:140: \n");
+
+    UpdateTip(pindexNew);
+
+    // Tell wallet about transactions that went from mempool to conflicted:
+    BOOST_FOREACH(const CTransaction &tx, txConflicted) {
+        SyncWithWallets(tx, NULL);
+    }
+
+        LogPrintf("SetBestChain:150 true.\n");
+    return true;
+}
+
 CBlockIndex* AddToBlockIndex(const CBlockHeader& block)
 {
     // Check for duplicate
@@ -2535,6 +2698,9 @@ bool ContextualCheckBlockHeader(const CBlockHeader& block, CValidationState& sta
         return state.DoS(100, error("%s : rejected by checkpoint lock-in at %d", __func__, nHeight),
                          REJECT_CHECKPOINT, "checkpoint mismatch");
 
+    if (IsSyncCheckpointEnforced() && !CheckSyncCheckpoint(hash, pindexPrev))
+        return error("AcceptBlock() : rejected by synchronized checkpoint");
+
     // Don't accept any forks from the main chain prior to last checkpoint
     CBlockIndex* pcheckpoint = Checkpoints::GetLastCheckpoint();
     if (pcheckpoint && nHeight < pcheckpoint->nHeight)
@@ -2668,7 +2834,13 @@ bool AcceptBlock(CBlock& block, CValidationState& state, CBlockIndex** ppindex, 
         return state.Abort(std::string("System error: ") + e.what());
     }
 
+    AcceptPendingSyncCheckpoint();
     return true;
+}
+
+bool CBlockIndex::IsInMainChain() const
+{
+        return chainActive.Contains(this);
 }
 
 bool CBlockIndex::IsSuperMajority(int minVersion, const CBlockIndex* pstart, unsigned int nRequired)
@@ -2745,6 +2917,10 @@ bool ProcessNewBlock(CValidationState &state, CNode* pfrom, CBlock* pblock, CDis
             return error("%s : CheckBlock FAILED", __func__);
         }
 
+        // ppcoin: ask for pending sync-checkpoint if any
+        if (!IsInitialBlockDownload())
+            AskForPendingSyncCheckpoint(pfrom);
+
         // Store to disk
         CBlockIndex *pindex = NULL;
         bool ret = AcceptBlock(*pblock, state, &pindex, dbp);
@@ -2755,6 +2931,10 @@ bool ProcessNewBlock(CValidationState &state, CNode* pfrom, CBlock* pblock, CDis
         if (!ret)
             return error("%s : AcceptBlock FAILED", __func__);
     }
+
+    // ppcoin: if responsible for sync-checkpoint send it
+    if (pfrom && !CSyncCheckpoint::strMasterPrivKey.empty() && (int)GetArg("-checkpointdepth", -1) >= 0)
+        SendSyncCheckpoint(AutoSelectSyncCheckpoint());
 
     if (!ActivateBestChain(state, pblock))
         return error("%s : ActivateBestChain failed", __func__);
@@ -2928,6 +3108,12 @@ bool static LoadBlockIndexDB()
             break;
         }
     }
+
+    // ppcoin: load hashSyncCheckpoint
+    if (!pblocktree->ReadSyncCheckpoint(hashSyncCheckpoint))
+         LogPrintf("LoadBlockIndexDB(): synchronized checkpoint not read\n");
+    else
+         LogPrintf("LoadBlockIndexDB(): synchronized checkpoint %s\n", hashSyncCheckpoint.ToString().c_str());
 
     // Check presence of blk files
     LogPrintf("Checking all blk files are present...\n");
@@ -3103,6 +3289,9 @@ bool InitBlockIndex() {
             CBlockIndex *pindex = AddToBlockIndex(block);
             if (!ReceivedBlockTransactions(block, state, pindex, blockPos))
                 return error("LoadBlockIndex() : genesis block not accepted");
+            // ppcoin: initialize synchronized checkpoint
+            if (!WriteSyncCheckpoint(Params().HashGenesisBlock()))
+                return error("LoadBlockIndex() : failed to init sync checkpoint");
             if (!ActivateBestChain(state, &block))
                 return error("LoadBlockIndex() : genesis block cannot be activated");
             // Force a chainstate write so that when we VerifyDB in a moment, it doesnt check stale data
@@ -3112,6 +3301,10 @@ bool InitBlockIndex() {
         }
     }
 
+
+    // ppcoin: if checkpoint master key changed must reset sync-checkpoint
+    if (!CheckCheckpointPubKey())
+        return error("LoadBlockIndex() : failed to reset checkpoint master pubkey");
     return true;
 }
 
@@ -3379,6 +3572,13 @@ string GetWarnings(string strFor)
     if (GetBoolArg("-testsafemode", false))
         strStatusBar = strRPC = "testsafemode enabled";
 
+    // Checkpoint warning
+    if (strCheckpointWarning != "")
+    {
+        nPriority = 900;
+        strStatusBar = strCheckpointWarning;
+    }
+
     // Misc warnings like out of disk space and clock is wrong
     if (strMiscWarning != "")
     {
@@ -3395,6 +3595,13 @@ string GetWarnings(string strFor)
     {
         nPriority = 2000;
         strStatusBar = strRPC = _("Warning: We do not appear to fully agree with our peers! You may need to upgrade, or other nodes may need to upgrade.");
+    }
+
+    // ppcoin: if detected invalid checkpoint enter safe mode
+    if (hashInvalidCheckpoint != 0)
+    {
+        nPriority = 3000;
+        strStatusBar = strRPC = "WARNING: Inconsistent checkpoint found! Stop enforcing checkpoints and notify developers to resolve the issue.";
     }
 
     // Alerts
@@ -3709,6 +3916,10 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
                   remoteAddr);
 
         AddTimeData(pfrom->addr, nTime);
+
+        // ppcoin: ask for pending sync-checkpoint if any
+        if (!IsInitialBlockDownload())
+            AskForPendingSyncCheckpoint(pfrom);
     }
 
 
@@ -4282,6 +4493,11 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
                     BOOST_FOREACH(CNode* pnode, vNodes)
                         alert.RelayTo(pnode);
                 }
+                {
+                    LOCK(cs_hashSyncCheckpoint);
+                    if (!checkpointMessage.IsNull())
+                        checkpointMessage.RelayTo(pfrom);
+                }
             }
             else {
                 // Small DoS penalty so peers that send us lots of
@@ -4295,7 +4511,20 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
         }
     }
 
-
+    else if (strCommand == "checkpoint" && !IsInitialBlockDownload())
+    {
+        CSyncCheckpoint checkpoint;
+        vRecv >> checkpoint;
+        LogPrintf("Checkpoint received. hashCheckpoint=%s\n.", checkpoint.hashCheckpoint.ToString().c_str());
+        if (checkpoint.ProcessSyncCheckpoint(pfrom))
+        {
+            // Relay
+            pfrom->hashCheckpointKnown = checkpoint.hashCheckpoint;
+            LOCK(cs_vNodes);
+            BOOST_FOREACH(CNode* pnode, vNodes)
+                checkpoint.RelayTo(pnode);
+        }
+    }
     else if (strCommand == "filterload")
     {
         CBloomFilter filter;

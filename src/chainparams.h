@@ -78,10 +78,15 @@ public:
     const std::vector<CDNSSeedData>& DNSSeeds() const { return vSeeds; }
     const std::vector<unsigned char>& Base58Prefix(Base58Type type) const { return base58Prefixes[type]; }
     const std::vector<CAddress>& FixedSeeds() const { return vFixedSeeds; }
+	const std::string CheckpointMainPubKey() const { return strMainPubKey; }
+	const std::string CheckpointTestPubKey() const { return strTestPubKey; }
     virtual const Checkpoints::CCheckpointData& Checkpoints() const = 0;
 protected:
     CChainParams() {}
 
+	// ppcoin: sync-checkpoint master key
+	std::string strMainPubKey;
+	std::string strTestPubKey;
     uint256 hashGenesisBlock;
     MessageStartChars pchMessageStart;
     //! Raw pub key bytes for the broadcast alert signing key.

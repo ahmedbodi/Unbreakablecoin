@@ -263,6 +263,9 @@ public:
     CBloomFilter* pfilter;
     int nRefCount;
     NodeId id;
+    uint256 hashCheckpointKnown;
+    CBlockIndex* pindexLastGetBlocksBegin;
+    uint256 hashLastGetBlocksEnd;
 protected:
 
     // Denial-of-service detection/prevention
@@ -411,6 +414,7 @@ public:
     void EndMessage() UNLOCK_FUNCTION(cs_vSend);
 
     void PushVersion();
+    void PushGetBlocks(CBlockIndex* pindexBegin, uint256 hashEnd);
 
 
     void PushMessage(const char* pszCommand)

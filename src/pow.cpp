@@ -77,6 +77,9 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
 
 bool CheckProofOfWork(uint256 hash, unsigned int nBits)
 {
+    if (hash == Params().HashGenesisBlock())
+        return true;
+
     bool fNegative;
     bool fOverflow;
     uint256 bnTarget;
