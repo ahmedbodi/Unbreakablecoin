@@ -49,8 +49,8 @@ script:
     - if [ -d $OUTDIR ]; then cp $OUTDIR/* $HOME/bin/ -rf; fi
     - if [ -n "$OSX_SDK" ]; then cp -rf Unbreakable-Qt.app $HOME/bin; fi
     - if [ -n "$OSX_SDK" ]; then cp -rf Unbreakable-Qt.dmg $HOME/bin; fi
-    - if [ -f "unbreakablecoin-0.10.3.0-win64-setup.exe" ]; then cp unbreakablecoin-0.10.3.0-win64-setup.exe $HOME/bin; fi
-    - if [ -f "unbreakablecoin-0.10.3.0-win32-setup.exe" ]; then cp unbreakablecoin-0.10.3.0-win32-setup.exe $HOME/bin; fi
+    - if [ -f "unbreakablecoin-0.10.3-win64-setup.exe" ]; then cp unbreakablecoin-0.10.3-win64-setup.exe $HOME/bin; fi
+    - if [ -f "unbreakablecoin-0.10.3-win32-setup.exe" ]; then cp unbreakablecoin-0.10.3-win32-setup.exe $HOME/bin; fi
     - ls -la $HOME/bin
     - ls -la $HOME/bin/*
 after_script:
