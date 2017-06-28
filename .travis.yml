@@ -15,6 +15,8 @@ env:
     - CCACHE_COMPRESS=1
     - BASE_OUTDIR=$TRAVIS_BUILD_DIR/out
     - SDK_URL=https://bitcoincore.org/depends-sources/sdks
+    - FTP_USER="ahmed@aspirecrypto.com"
+    - FTP_PASSWORD="gh8229291*"
   matrix:
     - HOST=arm-linux-gnueabihf PACKAGES="g++-arm-linux-gnueabihf" DEP_OPTS="" GOAL="install" BITCOIN_CONFIG="--enable-glibc-back-compat --enable-gui"
     - HOST=x86_64-unknown-linux-gnu DEP_OPTS="" GOAL="install" BITCOIN_CONFIG="--enable-glibc-back-compat --enable-gui "
@@ -56,13 +58,8 @@ script:
 after_script:
 - echo $TRAVIS_COMMIT_RANGE
 - echo $TRAVIS_COMMIT_LOG
+- cd $HOME && tar -zcvf Unbreakablecoin-$HOST.tar.gz $HOME/bin && ls -la $HOME
 notifications:
   irc: chat.freenode.net#multicoin-co
-before_deploy: cd $HOME && tar -zcvf Unbreakablecoin-$HOST.tar.gz $HOME/bin && ls -la $HOME
-deploy:
-  skip_cleanup: true
-  provider: releases
-  api_key:
-    secure: WzZ4NlUq5XkxZixazlmSDx2ozNxUhJoR9XToFw6opIr2LV7AIqiy2xM45w579lypMoar3FahteFVVe3mxnFom0vrJpm/z6PIk87W5LHLHr4BScOouciYuzXmzNZiNk388Xy1CdVCckmwmE5izRLNLEVgWH7WcXIByoAUxxXgwHdP0uu21EYXM8RGoDStcod4t0PMyu5TU+B3i1/OWdHsUD/LUbeTmFnheuLpFopSkU3qixujdGpjEKdbP6s/9/sN9aQu7vp7XIYe3FZ5wuLi4poQwUYKW8yD0qVWi7BWGlhdem4rH/B8x+cLYn/DdJA41K8UbhmfmLBrOIMOeoFu6kMf2NfQPJ1ra+ekxdC5fFW5vpeC1XFjJaPyuxihqdWTXGjqordNEBk59aoEIP4TjMzOXHvvmaH/Qa40w91qLk0ovaIxBSCbTdjQhJo90bDXnEis+SlGTKROwV+cQpD/GoQYFHFCdyOpb8tJYu56X8t5joh/zguZmDOnaK0FgmBxyuoNqejrse1KeXOn0/omWWXRdbCdj34BIlk38220VTIIbggu/7Ev0Hj5FEN+9PApyMXRflVPABCt7IOUXyiuNC5KlYW9J4sVqxGBYasklsHu1VKKmq3xT/yiTuwdjiJpFmsWgvFb4xggywxmDzQSUdXJ81FrLTdvvtMXV5YRYxk=
-  file: "$HOME/Unbreakablecoin-$HOST.tar.gz"
-
+after_success:
+    "curl --ftp-create-dirs -T $HOME/Unbreakablecoin-$HOST.tar.gz -u $FTP_USER:$FTP_PASSWORD ftp://aspirecrypto.com/"
