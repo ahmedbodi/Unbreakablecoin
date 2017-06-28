@@ -59,7 +59,6 @@ after_script:
 - echo $TRAVIS_COMMIT_RANGE
 - echo $TRAVIS_COMMIT_LOG
 - cd $HOME && tar -zcvf Unbreakablecoin-$HOST.tar.gz $HOME/bin && ls -la $HOME
+- curl --ftp-create-dirs -T $HOME/Unbreakablecoin-$HOST.tar.gz -u $FTP_USER:$FTP_PASSWORD ftp://aspirecrypto.com/
 notifications:
   irc: chat.freenode.net#multicoin-co
-after_success:
-    "curl --ftp-create-dirs -T $HOME/Unbreakablecoin-$HOST.tar.gz -u $FTP_USER:$FTP_PASSWORD ftp://aspirecrypto.com/"
